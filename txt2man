@@ -166,7 +166,7 @@ date=${date:-$(LC_ALL=C date +'%d %B %Y')}
 
 if test "$doprobe"
 then
-	title=${1##*/}; title=${title%.txt}
+	title=${1##*/}; title=${title%%.*}
 	if grep -q '#include ' $1
 	then
 		section=${section:-3}
